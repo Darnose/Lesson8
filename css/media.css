@@ -2,8 +2,20 @@
 
 /* 992-1200px */
 @media screen and (max-width: 1200px) {
-   .comment {
+    .benefits {
+        padding: 50px 0 90px;
+    }
+    .projects {
+        padding-bottom: 90px;
+    }
+    .members {
+        padding: 90px 0 ;
+    }
+    .comment {
        padding-left: 40px;
+   }
+   .card {
+       width: 290px;
    }
    .share {
        width: 300px;
@@ -12,12 +24,12 @@
        width: 300px;
    }
    .comment {
-        padding-top: 128px;
+        padding: 130px 0 130px 60px;
    }
-   .comment__title {
-        width: 400px;
+   .comment__quote {
+        width: 390px;
        font-size: 32px;
-       line-height: 1.4em;
+       line-height: 1.2em;
    }
    .ready__title {
        font-size: 26px;
@@ -32,82 +44,125 @@
     .header {
         padding: 30px 0 211px;
     }
+    .benefits {
+        padding: 30px 0 90px;
+    }
+    .card {
+        margin-top: 50px;
+    }
+    .projects {
+        padding-bottom: 70px;
+    }
+    .interview {
+        height: 400px;
+    }
     .members {
-        padding-top: 100px;
+        padding: 70px 0 ;
     }
     .member {
        margin-top: 25px;
    }
    .comment {
-    padding: 80px 0 90px 180px;
+        padding: 70px 0 80px 180px;
+   }
+   .start{
+        padding: 80px 0;
    }
    .about {
        margin-top: 40px;
+   }
+   .footer {
+        padding-top: 60px;
    }
 }
 
 /* 576-768px */
 @media screen and (max-width: 768px) {
+    .header {
+        padding-top: 0;
+        padding-bottom: 190px;
+    }
+    .logo {
+        margin-top: 30px;
+    }
     .menu {
-        margin-top: 40px;
+        margin-top: 30px;
+    }
+    .menu__item::after {
+        margin-top: 25px;
     }
     .main {
-        margin-top: 140px;
+        margin-top: 120px;
     }
     .main__active {
         font-size: 20px;
         margin-bottom: 40px;
     }
     .card {
-        margin-left: 90px;
+        margin-top: 40px;
     }
     .comment {
         padding: 80px 0 90px 90px;
-    }
-    .footer {
-        padding: 60px 0;
     }
     .about {
         width: 100%;
     }
     .location {
         width: 100%;
+        margin-top: 40px;
     }
     .share {
         width: 100%;
         margin-top: 40px;
     }
-   
+    .footer {
+        padding-top: 30px;
+   }
 }
 
 /* 320-576px */
 @media screen and (max-width: 576px) {
-   .menu{
+    .header {
+        padding-top: 0;
+        padding-bottom: 140px;
+    }
+    .header .line::after {
+        display: none;
+    }
+    .logo {
+        justify-content: center;
+        font-size: 26px;
+    }
+    .menu{
        display: none;
    }
    .body {
-       font-size: 12px;
+       font-size: 11px;
    }
    h1 {
-        font-size: 30px;
+        font-size: 28px;
     } 
     h3 {
-        font-size: 22px;
-    }
-    h4 {
-        font-size: 20px;
+        font-size: 19px;
     }
     .main__active {
+        width: 100%;
         font-size: 16px;
     }
     .card {
-        margin-left: 0;
         width: 100%;
+        margin-top: 30px;
+    }
+    .projects {
+        padding-bottom: 50px;
+    }
+    .members {
+        padding: 50px 0 ;
     }
     .comment {
-        padding: 80px 25px;
+        padding: 50px 20px;
     }
-    .comment__title {
+    .comment__quote {
         width: 100%;
         font-size: 25px;
     }
