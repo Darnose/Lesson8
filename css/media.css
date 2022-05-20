@@ -36,7 +36,7 @@
    }
 }
 
-/* 768-992px */
+/* 767-992px */
 @media screen and (max-width: 992px) {
     h1 {
         font-size: 38px;
@@ -76,20 +76,21 @@
    }
 }
 
-/* 576-768px */
-@media screen and (max-width: 768px) {
+/* 576-767px */
+@media screen and (max-width: 767px) {
     .header {
         padding-top: 0;
         padding-bottom: 190px;
     }
+    .header .line::after {
+        display: none;
+    }
     .logo {
+        justify-content: center;
         margin-top: 30px;
     }
-    .menu {
-        margin-top: 30px;
-    }
-    .menu__item::after {
-        margin-top: 25px;
+    .menu{
+        display: none;
     }
     .main {
         margin-top: 120px;
@@ -100,6 +101,9 @@
     }
     .card {
         margin-top: 40px;
+    }
+    .interview {
+        height: 350px;
     }
     .comment {
         padding: 80px 0 90px 90px;
@@ -124,23 +128,19 @@
 @media screen and (max-width: 576px) {
     .header {
         padding-top: 0;
-        padding-bottom: 140px;
+        padding-bottom: 110px;
     }
-    .header .line::after {
-        display: none;
+    .main {
+        margin-top: 90px;
     }
     .logo {
-        justify-content: center;
-        font-size: 26px;
+        font-size: 24px;
     }
-    .menu{
-       display: none;
-   }
    .body {
        font-size: 11px;
    }
    h1 {
-        font-size: 28px;
+        font-size: 26px;
     } 
     h3 {
         font-size: 19px;
@@ -155,6 +155,9 @@
     }
     .projects {
         padding-bottom: 50px;
+    }
+    .interview {
+        height: 250px;
     }
     .members {
         padding: 50px 0 ;
