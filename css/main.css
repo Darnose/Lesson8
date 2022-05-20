@@ -1,172 +1,425 @@
-/* ------ Media Queries ------ */
-
-/* 992-1200px */
-@media screen and (max-width: 1200px) {
-    .benefits {
-        padding: 50px 0 90px;
-    }
-    .projects {
-        padding-bottom: 90px;
-    }
-    .members {
-        padding: 90px 0 ;
-    }
-    .comment {
-       padding-left: 40px;
-   }
-   .card {
-       width: 290px;
-   }
-   .share {
-       width: 300px;
-   } 
-   .about {
-       width: 300px;
-   }
-   .comment {
-        padding: 130px 0 130px 60px;
-   }
-   .comment__quote {
-        width: 390px;
-       font-size: 32px;
-       line-height: 1.2em;
-   }
-   .ready__title {
-       font-size: 26px;
-   }
+/* ------ Specification ------ */
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #6c7279;
+	padding: 0;
+	margin: 0;
+	line-height: 1.5em;
+	font-size: 14px;
 }
 
-/* 768-992px */
-@media screen and (max-width: 992px) {
-    h1 {
-        font-size: 38px;
-    }
-    .header {
-        padding: 30px 0 211px;
-    }
-    .benefits {
-        padding: 30px 0 90px;
-    }
-    .card {
-        margin-top: 50px;
-    }
-    .projects {
-        padding-bottom: 70px;
-    }
-    .interview {
-        height: 400px;
-    }
-    .members {
-        padding: 70px 0 ;
-    }
-    .member {
-       margin-top: 25px;
-   }
-   .comment {
-        padding: 70px 0 80px 180px;
-   }
-   .start{
-        padding: 80px 0;
-   }
-   .about {
-       margin-top: 40px;
-   }
-   .footer {
-        padding-top: 60px;
-   }
+p {
+	margin: 0;
 }
 
-/* 576-768px */
-@media screen and (max-width: 768px) {
-    .header {
-        padding-top: 0;
-        padding-bottom: 190px;
-    }
-    .logo {
-        margin-top: 30px;
-    }
-    .menu {
-        margin-top: 30px;
-    }
-    .menu__item::after {
-        margin-top: 25px;
-    }
-    .main {
-        margin-top: 120px;
-    }
-    .main__active {
-        font-size: 20px;
-        margin-bottom: 40px;
-    }
-    .card {
-        margin-top: 40px;
-    }
-    .comment {
-        padding: 80px 0 90px 90px;
-    }
-    .about {
-        width: 100%;
-    }
-    .location {
-        width: 100%;
-        margin-top: 40px;
-    }
-    .share {
-        width: 100%;
-        margin-top: 40px;
-    }
-    .footer {
-        padding-top: 30px;
-   }
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
 }
 
-/* 320-576px */
-@media screen and (max-width: 576px) {
-    .header {
-        padding-top: 0;
-        padding-bottom: 140px;
-    }
-    .header .line::after {
-        display: none;
-    }
-    .logo {
-        justify-content: center;
-        font-size: 26px;
-    }
-    .menu{
-       display: none;
-   }
-   .body {
-       font-size: 11px;
-   }
-   h1 {
-        font-size: 28px;
-    } 
-    h3 {
-        font-size: 19px;
-    }
-    .main__active {
-        width: 100%;
-        font-size: 16px;
-    }
-    .card {
-        width: 100%;
-        margin-top: 30px;
-    }
-    .projects {
-        padding-bottom: 50px;
-    }
-    .members {
-        padding: 50px 0 ;
-    }
-    .comment {
-        padding: 50px 20px;
-    }
-    .comment__quote {
-        width: 100%;
-        font-size: 25px;
-    }
-    .ready__title {
-        font-size: 25px;
-    }
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+}
+
+h1 {
+    font-size: 45px;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    font-weight: 700;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 22px;
+    font-weight: 700;
+}
+
+h4 {
+	font-size: 14px;
+    font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+    color: #2d3033;
+}
+
+.input, input:hover, input:focus, input:active, button, button:hover, button:focus, input:active {
+    outline: none;
+} 
+
+.btn {
+    background: #e84545;
+    color: #fff;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.5s ease;
+}
+
+.btn:hover {
+    background: #e61010;
+    color: #fff;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+/* ------ First section ------ */
+
+.header {
+    position: relative;
+    background: url(../img/header.jpg) no-repeat center top ;
+    padding: 37px 0 243px;
+    z-index: 0;
+}
+
+.header::after {
+    content: '';
+    background: rgba(13, 11, 23, 0.78);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: -1;
+}
+
+.header .line::after {
+    content: '';
+    width: 100%;
+    border-bottom: 1px solid #53535c;
+}
+
+.logo {
+    display: flex;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.logo:hover {
+    color:#fff;
+}
+
+.logo__active {
+    color: #626fe4;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.menu__item::after {
+    content: '';
+    display: flex;
+    width:calc(100% + 50px);
+    margin-left: -25px;
+    border-bottom: 3px solid #a09fa1;
+    margin-top: 40px;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.menu__item {
+    text-transform: uppercase;
+}
+
+.menu__item:hover::after {
+    opacity: 1;
+}
+
+.menu__item a {
+    color: #fff;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 173px;
+}
+
+.main__title {
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.main__active {
+    width: 560px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 27px;
+    line-height: 1.5em;
+}
+
+.main__btn {
+    padding: 13px 48px;
+}
+
+/* ------ Second section ------ */
+
+.benefits {
+    padding: 46px 0 123px;
+}
+
+.card {
+    width: 320px;
+    margin: 74px auto 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: transparent;
+}
+
+.card img {
+    margin-bottom: 30px;
+}
+ 
+.card__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 17px;
+    color: #2d3033;
+}
+
+.card__text {
+    font-size: 14px;
+}
+
+/* ------ Third section ------ */
+
+.projects {
+    padding-bottom: 103px;
+}
+
+.project {
+    position: relative;
+    margin-bottom: 26px;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+}
+
+.project__overlay {
+    background: rgba(232, 69, 69, 0.90);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project__overlay:hover {
+    opacity: 1;
+}
+
+.project p {
+    line-height: 1.6em;
+    font-size: 14px;
+    color: #fff;
+}
+
+.project__title {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+/* ------ Fourth section ------ */
+
+.members {
+    padding: 125px 0 117px;
+    background: #f1f2fd;
+}
+
+.member__icon img {
+    height: 100%;
+    width: 100%;
+}
+
+.member__icon {
+    margin-bottom: 23px;
+}
+
+.member__title {
+    margin-bottom: 7px;
+}
+
+.member__prof {
+    font-size: 13px;
+    color: #e84545;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.member__text {
+    margin-bottom: 27px;
+}
+
+.member__social {
+    display: flex;
+}
+
+.fa-brands {
+    color: inherit;
+}
+
+.member__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    margin-right: 4px;
+    border: 1px solid #e8ecee;
+    transition: all 0.5s ease;
+}
+
+.member__box:hover {
+    background: #c6cacc;
+    color: #fff;
+}
+
+/* ------ Fifth section ------ */
+
+.interview {
+    background: url(../img/Layer\ 19.jpg) no-repeat center top/cover;
+    height: 500px;
+}
+
+.comment {
+    padding: 134px 0 145px 85px;
+    background: #53354a;
+    color: #fff;
+}
+
+.comment__quote {
+    font-size: 36px;
+    width: 480px;
+    line-height: 1.2em;
+    color: #fff;
+    margin-bottom: 27px;
+}
+
+.comment__text {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.container-fluid_plain {
+    padding: 0;
+}
+
+/* ------ Sixth section ------ */
+
+.start {
+    padding: 93px 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ready__title {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.ready__text {
+    font-size: 13px;
+    color: #57595b;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.ready__btn {
+    padding: 16px 77px;
+}
+
+/* ------ Seventh section ------ */
+
+.footer {
+    padding-top: 81px;
+    background: #3a3e64;
+    text-align: center;
+}
+
+.title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.location {
+    color: #adaebb;
+}
+
+.location__title {
+    margin-bottom: 10px;
+}
+
+.share {
+    width: 350px;
+    color: #808080;
+}
+
+.share__title {
+    margin-bottom: 20px;
+}
+
+.about {
+    width: 350px;
+    color: #9d9fb2;
+}
+
+.about__title {
+    margin-bottom: 20px;
+}
+
+.share__Y {
+    color: #df4547;
+}
+
+.share__by {
+    color: #fff;
+}
+
+.strip  {
+    margin-top: 70px;
+    height: 12px;
+    background: #313454;
 }
